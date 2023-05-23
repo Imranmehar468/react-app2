@@ -24,7 +24,6 @@ jobs:
 
       - name: Configure AWS credentials
         run: |
-          npm install -g aws-sdk
           echo ${{ secrets.AWS_ACCESS_KEY_ID }} > $HOME/.aws/credentials
           echo ${{ secrets.AWS_SECRET_ACCESS_KEY }} >> $HOME/.aws/credentials
           echo ${{ secrets.AWS_REGION }} >> $HOME/.aws/credentials
